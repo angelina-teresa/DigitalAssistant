@@ -20,7 +20,7 @@ public class DigitalAssistantService {
 
     public void saveMessage(MessageModel messageModel) throws InvalidInputException {
         if(messageModel.getName() == null || messageModel.getResponse() == null){
-            throw new InvalidInputException("Invalid Input", HttpStatus.BAD_REQUEST);
+            throw new InvalidInputException("Invalid Input ", HttpStatus.BAD_REQUEST);
         }
             Message message = new Message(messageModel.getName().toLowerCase().trim(),
                     messageModel.getResponse().toLowerCase());
